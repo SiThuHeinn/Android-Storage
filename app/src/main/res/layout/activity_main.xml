@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/label_private"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Private Storage"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_internal_storage_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_below="@id/label_private">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <TextView
+            android:id="@+id/label_shared_storage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_internal_storage_photo"
+            android:text="@string/shared_storage"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_shared_storage_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_below="@id/label_shared_storage" />
+
+
+
+    <LinearLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:padding="30dp"
+        android:layout_below="@id/rv_shared_storage_photo">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/camera"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_camera"
+            android:drawablePadding="10dp"/>
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_private"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Private"
+            android:checked="true"
+            android:textAlignment="center"
+            android:layoutDirection="ltr"/>
+
+
+    </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

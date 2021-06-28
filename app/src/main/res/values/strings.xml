@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidStorage</string>
+    <string name="camera">Camera</string>
+    <string name="shared_storage">Shared Storage</string>
+</resources>
